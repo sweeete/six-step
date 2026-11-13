@@ -1,0 +1,30 @@
+{
+  "name": "@local/dsh-six-step-preset",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./guard.js",
+  "exports": {
+    ".": "./guard.js",
+    "./guard.js": "./guard.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "description": "六步思考 agent preset (是什么→为什么→怎么做→任务划分→执行→审计, every step output, audit loops back to step 1 until complete) with an execution-completeness guard; for complex tasks the Lead orchestrates six named teammates in strict serial order, compressing every piece of info passing through the Lead before relaying it (self-contained; no length caps on the teammates' own thinking), with very fine-grained task division and unlimited audit loops (simple tasks unchanged); in the standard flow the Lead stays light — only dispatch, output each teammate's reply as a compressed summary to the owner, then give the final result, never writing the six steps' thinking itself (heavy work is all done by sub-agents); meta-task edits to this preset stay single-agent with no team.",
+  "license": "MIT",
+  "author": "sweeete",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sweeete/six-step.git"
+  },
+  "files": [
+    "guard.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

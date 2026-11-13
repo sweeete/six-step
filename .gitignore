@@ -1,0 +1,9 @@
+# DSH / node / OS noise
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# working drafts (not part of the distributed bundle)
+_tmp/
+*.tmp
